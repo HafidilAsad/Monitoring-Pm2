@@ -3,7 +3,7 @@ import * as pm2 from 'pm2';
 
 @Controller('pm2')
 export class PM2Controller {
-  @Get('processes')
+  @Get('list')
   async getProcesses() {
     return new Promise((resolve, reject) => {
       pm2.list((err, list) => {
